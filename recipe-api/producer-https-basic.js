@@ -15,8 +15,8 @@ import fastify from 'fastify';
 
 const serverOptions = {
     https: {
-        key: fs.readFileSync(path.dirname('./tls/basic-private-key.key')),
-        cert: fs.readFileSync(path.dirname('../shared/tls/basic-certificate.cert')),
+        key: fs.readFileSync(path.dirname('~/sample-projects/distributed-node/recipe-api/tls/basic-private-key.key')),
+        cert: fs.readFileSync(path.dirname('~/sample-projects/distributed-node/shared/tls/basic-certificate.cert')),
     }    
 };
 
