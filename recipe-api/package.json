@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node producer-http-basic.js",
+    "http": "node producer-http-basic.js",
+	"https": "node producer-https-basic.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
