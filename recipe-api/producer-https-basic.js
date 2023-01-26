@@ -1,17 +1,7 @@
 #!/usr/bin/env node
 import fs from 'fs';
 import path, { resolve } from 'path';
-// import { fileURLToPath } from 'url';
 import fastify from 'fastify';
-
-// const __filename = fileURLToPath(import.meta.url);
-// const __dirname = path.dirname(__filename);
-/* const serverOptions = {
-    https: {
-        key: fs.readFileSync(__dirname+'/tls/basic-private-key.key'),
-        cert: fs.readFileSync(__dirname+'/../shared/tls/basic-certificate.cert'),
-    }      
-};*/
 
 const serverOptions = {
     https: {
