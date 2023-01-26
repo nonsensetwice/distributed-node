@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import fs from 'fs';
-import path, { join } from 'path';
+import path, { resolve } from 'path';
 // import { fileURLToPath } from 'url';
 import fastify from 'fastify';
 
@@ -15,8 +15,8 @@ import fastify from 'fastify';
 
 const serverOptions = {
     https: {
-        key: fs.readFileSync(join(basePath, 'tls/basic-private-key.key')),
-        cert: fs.readFileSync(join(basePath, '/shared/tls/basic-certificate.cert')),
+        key: fs.readFileSync(resolve('./tls/basic-private-key.key')),
+        cert: fs.readFileSync(resolve('../shared/tls/basic-certificate.cert')),
     }    
 };
 
