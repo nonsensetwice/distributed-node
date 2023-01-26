@@ -1,7 +1,16 @@
 #!/usr/bin/env node
+import fs from 'fs';
 import fastify from 'fastify';
 
-const server = fastify();
+const serverOptions = {
+    https: {
+        key: fs.readFileSync(__dirname+'/tls/basic-private-key.key'),
+        cert: fs.readFileSync(__dirname+'/../shared/tls/basic-certificate.cert'),
+    }
+        
+};
+
+const server = fastify(serverOptions);
 const HOST = process.env.HOST || '127.0.0.1';
 const PORT = process.env.PORT || 4000;
 
