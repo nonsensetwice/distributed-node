@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import fastify from 'fastify';
-import graphql from 'fastify-gql';
+import graphql from 'mercurius';
 import fs from 'fs';
 import { resolve } from 'path';
 
