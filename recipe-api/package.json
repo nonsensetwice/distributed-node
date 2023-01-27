@@ -7,6 +7,7 @@
   "scripts": {
     "http": "node producer-http-basic.js",
 	"https": "node producer-https-basic.js",
+	"gql": "node producer-graphql.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
