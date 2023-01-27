@@ -5,8 +5,8 @@ import fastify from 'fastify';
 
 const serverOptions = {
     https: {
-        key: fs.readFileSync(resolve('./tls/basic-private-key.key')),
-        cert: fs.readFileSync(resolve('../shared/tls/basic-certificate.cert')),
+        key: fs.readFileSync(resolve('./tls/producer-private-key.key')),
+        cert: fs.readFileSync(resolve('../shared/tls/producer-certificate.cert')),
     }    
 };
 
