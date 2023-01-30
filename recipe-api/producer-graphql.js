@@ -1,11 +1,18 @@
 #!/usr/bin/env node
 
 import fastify from 'fastify';
-import graphql from 'mercurius';
+import mercurius from 'mercurius';
 import fs from 'fs';
 import { resolve } from 'path';
 
-const server = fastify();
+const serverOptions = {
+    https: {
+        key: fs.readFileSync(resolve('./tls/producer-private-key.key')),
+        cert: fs.readFileSync(resolve('../shared/tls/producer-certificate.cert')),
+    }    
+};
+
+const server = fastify(serverOptions);
 const schema = fs.readFileSync(resolve('../shared/graphql-schema.gql')).toString();
 
 const HOST = process.env.HOST || '127.0.0.1';
@@ -36,7 +43,7 @@ const resolvers = {
 
 try {
 	server
-        .register(graphql, { schema, resolvers, graphiql: true })
+        .register(mercurius, { schema, resolvers, graphiql: true })
 	    .listen(PORT, HOST, () => {
 		    console.log(`Producer running at http://${HOST}:${PORT}/graphql`);
 	    });
