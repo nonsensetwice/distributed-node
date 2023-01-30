@@ -7,6 +7,7 @@
   "scripts": {
     "http": "node consumer-http-basic.js",
 	"https": "node consumer-https-basic.js",
+	"gql": "node consumer-graphql.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

@@ -7,12 +7,14 @@
   "scripts": {
     "http": "node producer-http-basic.js",
     "https": "node producer-https-basic.js",
+    "gql": "node producer-graphql.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "fastify": "^3.29.4"
+    "fastify": "^3.29.4",
+    "mercurius": "^11.5.0"
   }
 }
