@@ -20,10 +20,7 @@ lib-cov
 
 # Certificate Authority Keys
 ca-private-key.key
-recipe-api/tls/producer-private-key.key
-recipe-api/tls/producer.csr
-shared/tls/ca-certificate.cert
-shared/tls/producer-certificate.cert
+*/tls/
 
 # Coverage directory used by tools like istanbul
 coverage
