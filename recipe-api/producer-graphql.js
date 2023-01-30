@@ -34,8 +34,12 @@ const resolvers = {
 	}
 };
 
-server
-    .register(graphql, { schema, resolvers, graphiql: true })
-	.listen(PORT, HOST, () => {
-		console.log(`Producer running at http://${HOST}:${PORT}/graphql`);
-	});
+try {
+	server
+        .register(graphql, { schema, resolvers, graphiql: true })
+	    .listen(PORT, HOST, () => {
+		    console.log(`Producer running at http://${HOST}:${PORT}/graphql`);
+	    });
+} catch (e) {
+	console.error(e);
+}
