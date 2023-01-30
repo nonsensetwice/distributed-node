@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 import fastify from 'fastify';
 import mercurius from 'mercurius';
 import fs from 'fs';
